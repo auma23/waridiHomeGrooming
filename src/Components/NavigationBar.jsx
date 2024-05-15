@@ -35,7 +35,7 @@ function NavigationBar() {
                   href="#"
                   className="text-gray-900 hover:text-gray-400 py-2 px-4 block"
                 >
-                  Submenu Item 1
+                  Space Planning
                 </a>
               </li>
               <li>
@@ -43,7 +43,7 @@ function NavigationBar() {
                   href="#"
                   className="text-gray-900 hover:text-gray-400 py-2 px-4 block"
                 >
-                  Submenu Item 2
+                  Color Consultation
                 </a>
               </li>
               <li>
@@ -51,14 +51,14 @@ function NavigationBar() {
                   href="#"
                   className="text-gray-900 hover:text-gray-400 py-2 px-4 block"
                 >
-                  Submenu Item 3
+                  Furniture & Accessory Selection
                 </a>
               </li>
             </ul>
           </li>
           <li>
             <a href="#" className="text-gray-900 hover:text-gray-400 py-2 px-2 font-medium text-sm">
-              PORTFOLIO
+              ABOUT
             </a>
           </li>
           
@@ -69,7 +69,7 @@ function NavigationBar() {
           </li>
           <li>
             <a href="#" className="text-gray-900 hover:text-gray-400 py-2 px-2 font-medium text-sm">
-              SALES
+              PRICES
             </a>
           </li>
           {/* <li>
@@ -79,7 +79,7 @@ function NavigationBar() {
           </li> */}
           <li>
             <a href="#" className="text-gray-900 hover:text-gray-400 py-2 px-2 font-medium text-sm">
-              GALLERY
+              TEAM
             </a>
           </li>
           <li>
@@ -92,7 +92,7 @@ function NavigationBar() {
               href="#"
               className="text-gray-900 hover:text-gray-400 py-2 px-2 font-medium flex items-center text-sm"
             >
-              PRODUCTS <svg className="h-4 w-4 ml-1" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 5L7.071 7.071L10 4.071L7.071 1L4 4L7.071 7.071Z" fill="currentColor"></path></svg>
+              SERVICES <svg className="h-4 w-4 ml-1" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 5L7.071 7.071L10 4.071L7.071 1L4 4L7.071 7.071Z" fill="currentColor"></path></svg>
             </a>
             <ul className="absolute hidden group-hover:block top-full left-0 bg-grey w-48">
               <li>
@@ -100,7 +100,7 @@ function NavigationBar() {
                   href="#"
                   className="text-gray-900 hover:text-gray-400 py-2 px-4 block"
                 >
-                  Submenu Item 1
+                  Interior Finishing
                 </a>
               </li>
               <li>
@@ -108,7 +108,7 @@ function NavigationBar() {
                   href="#"
                   className="text-gray-900 hover:text-gray-400 py-2 px-4 block"
                 >
-                  Submenu Item 2
+                  Landscaping
                 </a>
               </li>
               <li>
@@ -116,7 +116,23 @@ function NavigationBar() {
                   href="#"
                   className="text-gray-900 hover:text-gray-400 py-2 px-4 block"
                 >
-                  Submenu Item 3
+                  Cleaning and Laundry
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="text-gray-900 hover:text-gray-400 py-2 px-4 block"
+                >
+                  Interior Design & Decor
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="text-gray-900 hover:text-gray-400 py-2 px-4 block"
+                >
+                  B&B mantainance
                 </a>
               </li>
             </ul>
@@ -134,14 +150,14 @@ function NavigationBar() {
       </div>
 
       {/* Email and Contact Information */}
-      <div className="hidden md:flex md:flex-col md:justify-end md:items-end md:space-y-2 md:space-x-4 absolute top-0 right-0 bg-grey mr-10">
-        <p className="text-gray-900 text-sm font-medium">contact@example.com</p>
-        <p className="text-gray-900 text-sm font-medium">123-456-7890</p>
+      <div className="hidden md:flex md:flex-col md:justify-end md:items-end md:space-y-2 md:space-x-4 absolute top-0 right-0 bg-grey mr-20">
+        <p className="text-gray-900 text-sm font-medium">info@waridihomegrooming.com</p>
+        <p className="text-gray-900 text-sm font-medium">+254 733 139 202</p>
       </div>
 
       {/* Responsive Menu */}
       {isMenuOpen && (
-        <div className="md:hidden absolute top-16 left-0 bg-grey w-full border-t-2 border-gray-200 z-20">
+        <div className="md:hidden absolute top-16 left-0 bg-grey w-full border-t-2 border-gray-200 z-20 text-left">
           <ul className="flex flex-col items-center">
   <li>
     <a href="#" className="text-gray-900 hover:text-gray-400 py-2 px-2 font-medium text-sm">
@@ -184,7 +200,7 @@ function NavigationBar() {
   </li>
   <li>
     <a href="#" className="text-gray-900 hover:text-gray-400 py-2 px-2 font-medium text-sm">
-      PORTFOLIO
+      ABOUT
     </a>
   </li>
   
@@ -195,7 +211,7 @@ function NavigationBar() {
   </li>
   <li>
     <a href="#" className="text-gray-900 hover:text-gray-400 py-2 px-2 font-medium text-sm">
-      SALES
+      PRICES
     </a>
   </li>
   {/* <li>
@@ -205,7 +221,7 @@ function NavigationBar() {
   </li> */}
   <li>
     <a href="#" className="text-gray-900 hover:text-gray-400 py-2 px-2 font-medium text-sm">
-      GALLERY
+      TEAM
     </a>
   </li>
   <li>
@@ -218,7 +234,7 @@ function NavigationBar() {
       href="#"
       className="text-gray-900 hover:text-gray-400 py-2 px-2 font-medium flex items-center text-sm"
     >
-      PRODUCTS<svg className="h-4 w-4 ml-1" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 5L7.071 7.071L10 4.071L7.071 1L4 4L7.071 7.071Z" fill="currentColor"></path></svg>
+      SERVICES<svg className="h-4 w-4 ml-1" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 5L7.071 7.071L10 4.071L7.071 1L4 4L7.071 7.071Z" fill="currentColor"></path></svg>
     </a>
     <ul className="absolute hidden group-hover:block top-full left-0 bg-grey w-48">
       <li>
