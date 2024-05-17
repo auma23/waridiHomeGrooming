@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons'; // Import the 'times' icon
+import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons'; 
 
 function NavigationBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -12,7 +12,7 @@ function NavigationBar() {
   };
 
   return (
-    <nav className="bg-grey flex justify-between items-center h-16 px-4 z-10 top-0 w-full fixed mt-8">
+    <nav className="bg-grey flex justify-between items-center h-16 px-4 z-10 top-0 w-full fixed mt-1">
       <div className="flex w-2/3 items-center justify-between">
         <img src="./src/assets/logo.png" alt="PALACINA INTERIORS" className="w-40" />
         <ul className="hidden md:flex space-x-4">  
@@ -24,15 +24,15 @@ function NavigationBar() {
           {/* Add your other menu items */}
           <li className="group relative">
             <a
-              href="#"
-              className="text-gray-900 hover:text-gray-400 py-2 px-2 text-sm flex font-medium text-ellipsis overflow-hidden whitespace-nowrap"
+              href="#collection"
+              className="text-gray-900 hover:text-gray-400 px-2 text-sm flex font-medium text-ellipsis overflow-hidden whitespace-nowrap"
             >
               OUR COLLECTION <svg className="h-4 w-4 ml-1" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 5L7.071 7.071L10 4.071L7.071 1L4 4L7.071 7.071Z" fill="currentColor"></path></svg>
             </a>
             <ul className="absolute hidden group-hover:block top-full left-0 bg-grey w-48">
               <li>
                 <a
-                  href="#"
+                  href="#collection"
                   className="text-gray-900 hover:text-gray-400 py-2 px-4 block"
                 >
                   Space Planning
@@ -40,7 +40,7 @@ function NavigationBar() {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="#collection"
                   className="text-gray-900 hover:text-gray-400 py-2 px-4 block"
                 >
                   Color Consultation
@@ -48,7 +48,7 @@ function NavigationBar() {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="#collection"
                   className="text-gray-900 hover:text-gray-400 py-2 px-4 block"
                 >
                   Furniture & Accessory Selection
@@ -57,18 +57,18 @@ function NavigationBar() {
             </ul>
           </li>
           <li>
-            <a href="#" className="text-gray-900 hover:text-gray-400 py-2 px-2 font-medium text-sm">
+            <a href="#about" className="text-gray-900 hover:text-gray-400 py-2 px-2 font-medium text-sm">
               ABOUT
             </a>
           </li>
           
-          <li>
-            <a href="#" className="text-gray-900 hover:text-gray-400 py-2 px-2 font-medium text-sm">
+          {/* <li>
+            <a href="#blog" className="text-gray-900 hover:text-gray-400 py-2 px-2 font-medium text-sm">
               BLOG
             </a>
-          </li>
+          </li> */}
           <li>
-            <a href="#" className="text-gray-900 hover:text-gray-400 py-2 px-2 font-medium text-sm">
+            <a href="#price" className="text-gray-900 hover:text-gray-400 py-2 px-2 font-medium text-sm">
               PRICES
             </a>
           </li>
@@ -78,19 +78,19 @@ function NavigationBar() {
             </a>
           </li> */}
           <li>
-            <a href="#" className="text-gray-900 hover:text-gray-400 py-2 px-2 font-medium text-sm">
+            <a href="#team" className="text-gray-900 hover:text-gray-400 py-2 px-2 font-medium text-sm">
               TEAM
             </a>
           </li>
           <li>
-            <a href="#" className="text-gray-900 hover:text-gray-400 py-2 px-2 font-medium text-sm">
+            <a href="#contact" className="text-gray-900 hover:text-gray-400 py-2 px-2 font-medium text-sm">
               CONTACT
             </a>
           </li>
           <li className="group relative">
             <a
-              href="#"
-              className="text-gray-900 hover:text-gray-400 py-2 px-2 font-medium flex items-center text-sm"
+              href="#services"
+              className="text-gray-900 hover:text-gray-400 px-2 font-medium flex items-center text-sm"
             >
               SERVICES <svg className="h-4 w-4 ml-1" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 5L7.071 7.071L10 4.071L7.071 1L4 4L7.071 7.071Z" fill="currentColor"></path></svg>
             </a>

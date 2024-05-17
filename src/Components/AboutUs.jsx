@@ -1,29 +1,8 @@
 
-// function AboutUs() {
-//     return (
-//       <div className="bg-white rounded-lg shadow-md overflow-hidden">
-//         <div className="flex flex-col md:flex-row md:h-screen">
-//           <img className="h-full w-full object-cover md:w-1/2" src="./src/assets/image3.jpg" alt="Wasafi Laundromat" />
-//           <div className="flex flex-col p-6 md:pl-12 md:w-1/2 white-space-nowrap text-left">  <h2 className="text-xl font-bold mb-2 text-green">Wasafi Laundromat</h2>
-//             <p className="text-orange text-base">Leave It And We Clean It</p>
-//             <p className="text-gray-700 text-base mt-4">
-//               Wasafi Laundromat is a newly established launderette owned and operated by Goldsands Limited. Wasafi Laundromat initially operates at the Seasons Residence Building, Kasarani and shall soon be available in other parts of the City. The Goldsands brand has a name for integrity, quality, and timely delivery.
-//             </p>
-//             <p className="text-orange text-base mt-3">What we offer</p>
-//             <p className="text-gray-700 text-base mt-4">
-//               Wasafi Laundromat is a newly established launderette owned and operated by Goldsands Limited. Wasafi Laundromat initially operates at the Seasons Residence Building, Kasarani and shall soon be available in other parts of the City. The Goldsands brand has a name for integrity, quality, and timely delivery.
-//             </p>
-//           </div>
-//         </div>
-//       </div>
-//     )
-//   }
-  
-//   export default AboutUs
   
 function AboutUs() {
     return (
-      <div className="bg-white rounded-lg shadow-md overflow-hidden">
+      <div className="bg-white rounded-lg shadow-md overflow-hidden" id="about">
         <div className="text-center p-6 text-3xl font-bold text-green">
           About Us
         </div>

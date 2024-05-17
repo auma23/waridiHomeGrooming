@@ -26,7 +26,7 @@ function PriceList() {
       },
       {
         title: 'LAND SCAPING',
-        description: 'All sorts of shoes',
+        description: 'Landscaping Ideas for Outdoor Space',
         price: 'Ksh. 1000',
         imageUrl: './src/assets/image7.png',
       },
@@ -39,7 +39,7 @@ function PriceList() {
     ];
   
     return (
-      <div className="bg-[#fff] rounded-lg shadow-md px-4 py-8">
+      <div className="bg-[#fff] rounded-lg shadow-md px-4 py-8" id="price">
         <h2 className="text-3xl font-bold text-center mb-4 text-green">Price List</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {priceListItems.map((item) => (

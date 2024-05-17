@@ -11,8 +11,9 @@ function Contact() {
   };
 
   return (
-    <div className="max-w-screen-lg mx-auto p-5" id='contact'>
-      <div className="grid grid-cols-1 md:grid-cols-12 border text-left">
+    
+    <div className="max-w-screen-lg  my-6 bg-gray-100" id='contact' >
+      <div className="grid grid-cols-1 md:grid-cols-12 text-left">
         <div className="bg-gradient-to-b from-green to-orange md:col-span-4 p-10 text-grey">
           <p className="mt-4 text-sm leading-7 text-yellow font-regular uppercase">Contact</p>
           <h3 className="text-3xl sm:text-4xl leading-normal font-extrabold tracking-tight">
@@ -107,6 +108,7 @@ function Contact() {
               </form>
             </div>
           </div>
+          
           );
           }
           

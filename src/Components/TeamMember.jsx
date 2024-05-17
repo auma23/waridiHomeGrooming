@@ -3,23 +3,23 @@ import { motion } from 'framer-motion';
 
 const teamMembers = [
   {
-    name: 'John Doe',
+    name: 'Brian Basweti',
     title: 'CEO',
-    image: './src/assets/image2.jpg',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    image: './src/assets/brian.jpeg',
+    description: 'A visionary leader known for his strategic ability to drive transformative growth within the company.',
   },
   {
-    name: 'Jane Smith',
-    title: 'CTO',
+    name: 'Sylvia Kaberia',
+    title: 'COO',
     image: './src/assets/image3.jpg',
-    description: 'Donec euismod bibendum laoreet.',
+    description: 'Excels in operational efficiency and is renowned for her skill in streamlining processes',
   },
-  {
-    name: 'Michael Lee',
-    title: 'Designer',
-    image: './src/assets/image1.jpg',
-    description: 'Nulla vitae elit libero, a pharetra augue.',
-  },
+  // {
+  //   name: 'Michael Lee',
+  //   title: 'Designer',
+  //   image: './src/assets/image1.jpg',
+  //   description: 'Nulla vitae elit libero, a pharetra augue.',
+  // },
 ];
 
 function TeamMember() { 
@@ -45,6 +45,7 @@ function TeamMember() {
     <motion.div
       ref={cardRef}
       className="bg-grey rounded-lg shadow-md px-4 py-8 overflow-hidden flex flex-col items-center" 
+      id='team'
     >
       <h2 className="text-3xl font-bold text-center mb-4 text-green">Founders</h2> 
       <div className="relative">

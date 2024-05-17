@@ -16,7 +16,7 @@ import logo from "../assets/logo.png"
 const Footer = () => {
   return (
 
-<footer className="bg-gray-900 text-white lg:text-left">
+<footer className="bg-[#244343] text-white lg:text-left">
 <div className="flex flex-col md:flex-row items-center justify-center border-b-2 border-neutral-200 p-6 lg:justify-between">
 <div className="mb-4 md:mb-0 md:me-12 flex flex-col items-center md:items-start">
   <img src={logo} alt="Logo" className="h-30 w-40 mb-2" />
@@ -56,16 +56,16 @@ const Footer = () => {
     <div className="mb-8 md:mb-0 md:me-12">
       <h6 className="mb-4 font-semibold uppercase">Products</h6>
       <p className="mb-4">
-        <a href="#!" className="text-white hover:text-primary">Laundry</a>
+        <a href="#!" className="text-white hover:text-primary">Laundry & Cleaning</a>
       </p>
       <p className="mb-4">
-        <a href="#!" className="text-white hover:text-primary">Delivery</a>
+        <a href="#!" className="text-white hover:text-primary">B&B Maintainance</a>
       </p>
       <p className="mb-4">
-        <a href="#!" className="text-white hover:text-primary">Wash and Fold</a>
+        <a href="#!" className="text-white hover:text-primary">Interior Decor and finishing</a>
       </p>
       <p>
-        <a href="#!" className="text-white hover:text-primary">Ironing</a>
+        <a href="#!" className="text-white hover:text-primary">Landscaping</a>
       </p>
     </div>
     <div className="mb-8 md:mb-0 md:me-12">
