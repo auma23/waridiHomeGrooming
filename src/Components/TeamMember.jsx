@@ -1,5 +1,94 @@
-import { useState, useRef, useEffect } from 'react';
-import { motion } from 'framer-motion';
+// import { useState, useEffect } from 'react';
+// import { motion, AnimatePresence } from 'framer-motion';
+
+// const teamMembers = [
+//   {
+//     name: 'Brian Basweti',
+//     title: 'CEO',
+//     image: './src/assets/brian.jpeg',
+//     description: 'A visionary leader known for his strategic ability to drive transformative growth within the company.',
+//   },
+//   {
+//     name: 'Sylvia Kaberia',
+//     title: 'COO',
+//     image: './src/assets/sylvia.jpg',
+//     description: 'Excels in operational efficiency and is renowned for her skill in streamlining processes',
+//   },
+// ];
+
+// const imageVariants = {
+//   hidden: { opacity: 0, scale: 0.8 },
+//   visible: { opacity: 1, scale: 1, transition: { duration: 1 } },
+// };
+
+// const textVariants = {
+//   hidden: { opacity: 0, y: 20 },
+//   visible: { opacity: 1, y: 0, transition: { duration: 1, delay: 0.5 } },
+// };
+
+// function TeamMember() { 
+//   const [currentIndex, setCurrentIndex] = useState(0);
+
+//   useEffect(() => {
+//     const interval = setInterval(() => {
+//       setCurrentIndex((prevIndex) => (prevIndex + 1) % teamMembers.length);
+//     }, 5000); // Change every 5 seconds
+//     return () => clearInterval(interval); // Cleanup interval on component unmount
+//   }, []);
+
+//   // const currentMember = teamMembers[currentIndex];
+
+//   return (
+//     <div className="bg-grey rounded-lg shadow-md px-4 py-8 overflow-hidden flex items-center justify-center flex-col" id='team'>
+//       <h2 className="text-3xl font-semibold text-center mb-4 text-orange">Founders</h2> 
+//       <AnimatePresence mode="wait">
+//         {teamMembers.map(member => (
+//           <motion.div
+//             key={member.name}
+//             initial="hidden"
+//             animate="visible"
+//             exit="hidden"
+//             variants={{
+//               hidden: { opacity: 0 },
+//               visible: { opacity: 1, transition: { staggerChildren: 0.5 } },
+//             }}
+//             className="flex flex-col items-center mr-4"
+//           >
+//             <motion.img
+//               src={member.image}
+//               alt={member.name}
+//               className="w-24 h-24 object-cover rounded-full mb-4"
+//               variants={imageVariants}
+//             />
+//             <motion.h3
+//               className="text-xl font-bold text-center mb-2 text-orange"
+//               variants={textVariants}
+//             >
+//               {member.name}
+//             </motion.h3>
+//             <motion.p
+//               className="text-gray-700 text-base text-center mb-4"
+//               variants={textVariants}
+//             >
+//               {member.title}
+//             </motion.p>
+//             <motion.p
+//               className="text-gray-500 text-base text-center"
+//               variants={textVariants}
+//             >
+//               {member.description}
+//             </motion.p>
+//           </motion.div>
+//         ))}
+//       </AnimatePresence>
+//     </div>
+//   );
+// }
+
+// export default TeamMember;
+
+import { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const teamMembers = [
   {
@@ -11,67 +100,77 @@ const teamMembers = [
   {
     name: 'Sylvia Kaberia',
     title: 'COO',
-    image: './src/assets/image3.jpg',
+    image: './src/assets/sylvia.jpg',
     description: 'Excels in operational efficiency and is renowned for her skill in streamlining processes',
   },
-  // {
-  //   name: 'Michael Lee',
-  //   title: 'Designer',
-  //   image: './src/assets/image1.jpg',
-  //   description: 'Nulla vitae elit libero, a pharetra augue.',
-  // },
 ];
+
+const imageVariants = {
+  hidden: { opacity: 0, scale: 0.8 },
+  visible: { opacity: 1, scale: 1, transition: { duration: 1 } },
+};
+
+const textVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 1, delay: 0.5 } },
+};
 
 function TeamMember() { 
   const [currentIndex, setCurrentIndex] = useState(0);
-  const cardRef = useRef(null);
-  const animationRef = useRef(null);
-
-  const handleNext = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % teamMembers.length);
-  };
 
   useEffect(() => {
-    const animation = animationRef.current;
-    if (animation) {
-      animation.start({
-        x: cardRef.current.offsetWidth * -1, 
-        transition: { duration: 5, ease: 'linear', repeat: Infinity },
-      });
-    }
-  }, [animationRef.current]);
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % teamMembers.length);
+    }, 5000); // Change every 5 seconds
+    return () => clearInterval(interval); // Cleanup interval on component unmount
+  }, []);
 
   return (
-    <motion.div
-      ref={cardRef}
-      className="bg-grey rounded-lg shadow-md px-4 py-8 overflow-hidden flex flex-col items-center" 
-      id='team'
-    >
-      <h2 className="text-3xl font-bold text-center mb-4 text-green">Founders</h2> 
-      <div className="relative">
-        <img
-          src={teamMembers[currentIndex].image}
-          alt={teamMembers[currentIndex].name}
-          className="w-24 h-24 object-cover rounded-full mb-4" 
-        />
-      </div>
-      <h3 className="text-xl font-bold text-center mb-2 text-orange">
-        {teamMembers[currentIndex].name}
-      </h3>
-      <p className="text-gray-700 text-base text-center mb-4">
-        {teamMembers[currentIndex].title}
-      </p>
-      <p className="text-gray-500 text-base text-center">
-        {teamMembers[currentIndex].description}
-      </p>
-      <button
-        className=" bg-orange hover:bg-opacity-50 text-grey font-bold py-2 px-4 rounded-lg shadow-md mt-10" 
-        onClick={handleNext}
-        style={{ transition: 'all 0.3s', color: 'white' }} 
-      >
-        Next 
-      </button>
-    </motion.div>
+    <div className="bg-grey rounded-lg shadow-md px-4 py-8 overflow-hidden flex flex-col items-center justify-center" id='team'>
+      <h2 className="text-3xl font-semibold text-center mb-4 text-orange">Founders</h2> 
+      <AnimatePresence mode="wait">
+        <div className="flex flex-wrap justify-center gap-4 w-full">
+          {teamMembers.map(member => (
+            <motion.div
+              key={member.name}
+              initial="hidden"
+              animate="visible"
+              exit="hidden"
+              variants={{
+                hidden: { opacity: 0 },
+                visible: { opacity: 1, transition: { staggerChildren: 0.5 } },
+              }}
+              className="flex flex-col items-center p-4 sm:w-full md:w-1/2 lg:w-1/3"
+            >
+              <motion.img
+                src={member.image}
+                alt={member.name}
+                className="w-24 h-24 object-cover rounded-full mb-4"
+                variants={imageVariants}
+              />
+              <motion.h3
+                className="text-xl font-bold text-center mb-2 text-orange"
+                variants={textVariants}
+              >
+                {member.name}
+              </motion.h3>
+              <motion.p
+                className="text-gray-700 text-base text-center mb-4"
+                variants={textVariants}
+              >
+                {member.title}
+              </motion.p>
+              <motion.p
+                className="text-gray-500 text-base text-center"
+                variants={textVariants}
+              >
+                {member.description}
+              </motion.p>
+            </motion.div>
+          ))}
+        </div>
+      </AnimatePresence>
+    </div>
   );
 }
 

@@ -22,13 +22,13 @@ const Footer = () => {
   <img src={logo} alt="Logo" className="h-30 w-40 mb-2" />
   <span className="block text-center md:text-left">Get connected with us on social networks:</span>
   <div className="flex justify-center md:justify-start">
-    <a href="#!" className="me-6 hover:text-primary">
+    <a href="https://www.facebook.com/profile.php?id=61550708957551" className="me-6 hover:text-primary">
       <FontAwesomeIcon icon={faFacebook} className="h-4 w-4" />
     </a>
     <a href="#!" className="me-6 hover:text-primary">
       <FontAwesomeIcon icon={faTwitter} className="h-4 w-4" />
     </a>
-    <a href="#!" className="me-6 hover:text-primary">
+    <a href="https://www.instagram.com/waridihomegroomingservices?utm_source=qr&igsh=dDFseDhhdDYwcXg0" className="me-6 hover:text-primary">
       <FontAwesomeIcon icon={faInstagram} className="h-4 w-4" />
     </a>
     <a href="#!" className="me-6 hover:text-primary">
@@ -101,7 +101,7 @@ const Footer = () => {
         <span className="me-3 hover:text-primary">
           <FontAwesomeIcon icon={faPhoneAlt} className="h-5 w-5" />
         </span>
-        +254 733 139 202
+        +254 707 863 773
       </p>
     </div>
   </div>
@@ -111,7 +111,7 @@ const Footer = () => {
 <div className="bg-black/5 p-6 text-center">
   <span>© 2024 Copyright:</span>
   <a className="font-semibold text-white" href="#">
-    WaridiHomeGrooming Services Ltd Powered by Sylvia Kaberia - Waridi Kenya
+    WaridiHomeGrooming Services Ltd Powered by Auma - Waridi Kenya
   </a>
 </div>
 </footer>
@@ -120,3 +120,4 @@ const Footer = () => {
     };
 
 export default Footer;
+

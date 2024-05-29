@@ -1,30 +1,81 @@
+
+
+// import { Link } from 'react-router-dom';
+// import TruckIcon from '../assets/image13.png';
+// import BroomIcon from '../assets/image4.png';
+// import HomeIcon from '../assets/image14.png';
+
+// const HowItWorks = () => {
+//   return (
+//     <section className="how-it-works bg-gray-100 py-20" id="collection">
+//       <div className="container mx-auto px-4">
+//         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+//           <Link to="/contact" className="card relative rounded-lg overflow-hidden flex flex-col items-center transition duration-300 hover:bg-gray-50">
+//             <img src={TruckIcon} alt="Book Icon" className="w-20 h-20 mt-4 mb-2" />
+//             <div className="card-content p-6 text-center text-gray-600">
+//               <h3 className="text-xl font-semibold mb-2 text-orange">Booking</h3>
+//               <p className="text-lg mb-4">Refresh your space with our professional cleaning and interior decor services—book now to transform your home</p>
+//             </div>
+//           </Link>
+//           <Link to="/price-list" className="card relative rounded-lg overflow-hidden flex flex-col items-center transition duration-300 hover:bg-gray-50">
+//             <img src={BroomIcon} alt="Cleaning Icon" className="w-20 h-20  mt-4 mb-2" />
+//             <div className="card-content p-6 text-center text-gray-600">
+//               <h3 className="text-xl font-semibold mb-2 text-orange">Cleaning</h3>
+//               <p className="text-lg mb-4">Transform your home into a haven of cleanliness and style. Contact us now to experience the difference</p>
+//             </div>
+//           </Link>
+//           <Link to="/packages" className="card relative rounded-lg overflow-hidden flex flex-col items-center transition duration-300 hover:bg-gray-50">
+//             <img src={HomeIcon} alt="Interior Decor & Finishing Icon" className="w-20 h-20 mt-4 mb-2" />
+//             <div className="card-content p-6 text-center text-gray-600">
+//               <h3 className="text-xl font-semibold mb-2 text-orange">Interior Decor & Finishing</h3>
+//               <p className="text-lg mb-4">Elevate your space with expert interior decoration and finishing touches. Contact us today to bring your vision to life</p>
+//             </div>
+//           </Link>
+//         </div>
+//       </div>
+//     </section>
+//   );
+// };
+
+// export default HowItWorks;
+
+import { Link } from 'react-router-dom';
+import { useState } from 'react';
+
+import TruckIcon from '../assets/image13.png';
+import BroomIcon from '../assets/image4.png';
+import HomeIcon from '../assets/image14.png';
+
 const HowItWorks = () => {
+  const handleLinkClick = () => {
+    window.scrollTo(0, 0); // Scrolls to the top of the page
+  };
+
   return (
     <section className="how-it-works bg-gray-100 py-20" id="collection">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center text-green mb-10">How It Works</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="card relative rounded-lg overflow-hidden">
-            <img src="./src/assets/image14.jpg" alt="Icon 1" className="w-full h-auto object-cover" />
-            <div className="card-content p-6 text-center text-grey bg-gradient-to-b from-orange to-blue">
-              <h3 className="text-xl font-bold mb-2">We Collect/You Drop Off</h3>
-              <p className="text-lg mb-4">Schedule a pickup or drop off your laundry at a convenient location.</p>
+          <Link to="/contact" className="card relative rounded-lg overflow-hidden flex flex-col items-center transition duration-300 hover:bg-gray-50" onClick={handleLinkClick}>
+            <img src={TruckIcon} alt="Book Icon" className="w-20 h-20 mt-4 mb-2" />
+            <div className="card-content p-6 text-center text-gray-600">
+              <h3 className="text-xl font-semibold mb-2 text-orange">Booking</h3>
+              <p className="text-lg mb-4">Refresh your space with our professional cleaning and interior decor services—book now to transform your home</p>
             </div>
-          </div>
-          <div className="card relative rounded-lg overflow-hidden">
-            <img src="./src/assets/image12.avif" alt="Icon 2" className="w-full h-auto object-cover" />
-            <div className="card-content p-6 text-center text-grey bg-gradient-to-b from-orange to-blue">
-              <h3 className="text-xl font-bold mb-2">We Clean</h3>
-              <p className="text-lg mb-4">Our professional team cleans your House, Clothes and Other Items with care.</p>
+          </Link>
+          <Link to="/price-list" className="card relative rounded-lg overflow-hidden flex flex-col items-center transition duration-300 hover:bg-gray-50" onClick={handleLinkClick}>
+            <img src={BroomIcon} alt="Cleaning Icon" className="w-20 h-20  mt-4 mb-2" />
+            <div className="card-content p-6 text-center text-gray-600">
+              <h3 className="text-xl font-semibold mb-2 text-orange">Cleaning</h3>
+              <p className="text-lg mb-4">Transform your home into a haven of cleanliness and style. Contact us now to experience the difference</p>
             </div>
-          </div>
-          <div className="card relative rounded-lg overflow-hidden">
-            <img src="./src/assets/image23.jpg" alt="Icon 3" className="w-full h-auto object-cover" />
-            <div className="card-content p-6 text-center text-grey bg-gradient-to-b from-orange to-blue">
-              <h3 className="text-xl font-bold mb-2">We Decorate/We finish up</h3>
-              <p className="text-lg mb-4">Transform your home with our premium interior finishing and decor services.</p>
+          </Link>
+          <Link to="/packages" className="card relative rounded-lg overflow-hidden flex flex-col items-center transition duration-300 hover:bg-gray-50" onClick={handleLinkClick}>
+            <img src={HomeIcon} alt="Interior Decor & Finishing Icon" className="w-20 h-20 mt-4 mb-2" />
+            <div className="card-content p-6 text-center text-gray-600">
+              <h3 className="text-xl font-semibold mb-2 text-orange">Interior Decor & Finishing</h3>
+              <p className="text-lg mb-4">Elevate your space with expert interior decoration and finishing touches. Contact us today to bring your vision to life</p>
             </div>
-          </div>
+          </Link>
         </div>
       </div>
     </section>
@@ -32,5 +83,3 @@ const HowItWorks = () => {
 };
 
 export default HowItWorks;
-
-  
