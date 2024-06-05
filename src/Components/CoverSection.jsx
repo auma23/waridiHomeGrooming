@@ -1,16 +1,18 @@
-
-
 // import { motion, AnimatePresence } from 'framer-motion';
 // import { useEffect, useState } from 'react';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+// import { Link } from 'react-router-dom';
+// import Image8 from '../assets/image8.jpg';
+// import Image1 from '../assets/image1.jpg';
+// import Image2 from '../assets/image2.jpg';
 
 // const coverSections = [
 //   {
 //     title: 'Waridi Home Grooming Services:',
 //     subtitle: 'Transforming Your Space into a Haven',
-//     buttonText: 'Order Now',
-//     image: './src/assets/image1.jpg',
+//     buttonText: 'Book Now',
+//     image: Image1,
 //   },
 //   {
 //     title: 'Our Services',
@@ -25,7 +27,7 @@
 //       'Sofa Cleaning',
 //       'Landscaping',
 //     ],
-//     image: './src/assets/image2.jpg',
+//     image: Image2,
 //   },
 //   {
 //     title: 'Additional Services',
@@ -35,7 +37,7 @@
 //       'Furniture Selection & Placement',
 //       'Accessory Selection',
 //     ],
-//     image: './src/assets/image8.jpg',
+//     image: Image8,
 //   },
 // ];
 
@@ -49,6 +51,10 @@
 
 //     return () => clearInterval(interval);
 //   }, []);
+
+//   const scrollToTop = () => {
+//     window.scrollTo({ top: 0, behavior: 'smooth' });
+//   };
 
 //   const sectionVariants = {
 //     initial: { opacity: 0, scale: 0.8, x: -200 },
@@ -87,10 +93,10 @@
 //                     </ul>
 //                   )}
 //                   {section.buttonText && (
-//                     <button className="bg-orange hover:bg-transparent hover:text-orange text-grey font-bold py-2 px-4 rounded mt-8 flex items-center transition duration-300 ease-in-out">
+//                     <Link to="/contact" className="text-orange font-bold py-2 px-2 rounded mt-8 flex items-center transition duration-300 ease-in-out" onClick={scrollToTop}>
 //                       {section.buttonText}
 //                       <FontAwesomeIcon className="ml-2" icon={faArrowRight} />
-//                     </button>
+//                     </Link>
 //                   )}
 //                 </div>
 //               </div>
@@ -104,19 +110,21 @@
 
 // export default CoverSection;
 
-
 import { motion, AnimatePresence } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
+import Image8 from '../assets/image8.jpg';
+import Image1 from '../assets/image1.jpg';
+import Image2 from '../assets/image2.jpg';
 
 const coverSections = [
   {
     title: 'Waridi Home Grooming Services:',
     subtitle: 'Transforming Your Space into a Haven',
     buttonText: 'Book Now',
-    image: './src/assets/image1.jpg',
+    image: Image1,
   },
   {
     title: 'Our Services',
@@ -131,7 +139,7 @@ const coverSections = [
       'Sofa Cleaning',
       'Landscaping',
     ],
-    image: './src/assets/image2.jpg',
+    image: Image2,
   },
   {
     title: 'Additional Services',
@@ -141,7 +149,7 @@ const coverSections = [
       'Furniture Selection & Placement',
       'Accessory Selection',
     ],
-    image: './src/assets/image8.jpg',
+    image: Image8,
   },
 ];
 
@@ -167,7 +175,7 @@ const CoverSection = () => {
   };
 
   return (
-    <section className="cover-section bg-grey flex flex-col items-start justify-center h-screen relative mt-10 overflow-hidden">
+    <section className="cover-section bg-grey flex flex-col items-start justify-center h-screen relative mt-1 overflow-hidden">
       <AnimatePresence>
         {coverSections.map((section, index) => (
           currentSection === index && (
@@ -183,7 +191,7 @@ const CoverSection = () => {
                 src={section.image}
                 alt="Cover Image"
                 className="w-full h-screen object-cover z-0"
-                style={{ maxHeight: '550px' }}
+                style={{ maxHeight: 'calc(100vh - 60px)' }} // Adjusted the max height to take into account the header height
               />
               <div className="absolute top-0 left-0 p-8 mt-20">
                 <div className="bg-blue bg-opacity-10 p-8 rounded-md text-left">
@@ -197,7 +205,7 @@ const CoverSection = () => {
                     </ul>
                   )}
                   {section.buttonText && (
-                    <Link to="/contact" className="text-orange font-bold py-2 px-4 rounded mt-8 flex items-center transition duration-300 ease-in-out" onClick={scrollToTop}>
+                    <Link to="/contact" className="text-orange font-bold py-2 px-2 rounded mt-8 flex items-center transition duration-300 ease-in-out" onClick={scrollToTop}>
                       {section.buttonText}
                       <FontAwesomeIcon className="ml-2" icon={faArrowRight} />
                     </Link>

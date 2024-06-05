@@ -2,30 +2,39 @@
   
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import Image16 from '../assets/image16.avif';
+import Image24 from '../assets/image24.jpg';
+import Image19 from '../assets/image19.avif';
+import Image26 from '../assets/image26.jpg';
+import Image6 from '../assets/image6.jpg';
+import Image22 from '../assets/image22.jpg';
+
+
+
 
 const services = [
   {
-    image: './src/assets/image16.avif',
+    image: Image16,
     title: 'Laundry',
   },
   {
-    image: './src/assets/image24.jpg',
+    image: Image24,
     title: 'Interior finishing',
   },
   {
-    image: './src/assets/image26.jpg',
+    image: Image26,
     title: 'AirBnB maintenance',
   },
   {
-    image: './src/assets/image19.avif',
+    image: Image19,
     title: 'Cleaning',
   },
   {
-    image: './src/assets/image22.jpg',
+    image: Image22,
     title: 'Interior Design & Decor',
   },
   {
-    image: './src/assets/image6.jpg',
+    image: Image6,
     title: 'Landscaping',
   },
 ];

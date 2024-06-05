@@ -1,108 +1,14 @@
-// function PriceList() {
-//     const priceListItems = [
-//       {
-//         title: '1-Bedroom Arpartment Maintanance',
-//         description: 'Laundry',
-//         description1: 'Ironing & Folding',
-//         description2: 'General House Cleaning',
-//         description3: 'Shoes Cleaning',
-//         description4: 'Utensils & surfaces cleaning',
-//         price: 'Kshs. 3500',
-//         imageUrl: './src/assets/image6.png',
-//       },
-//       {
-//         title: '2-Bedroom Arpartment Maintanance',
-//         description: 'Laundry',
-//         description1: 'Ironing & Folding',
-//         description2: 'General House Cleaning',
-//         description3: 'Shoes Cleaning',
-//         description4: 'Utensils & surfaces cleaning',
-//         price: 'Kshs. 4500',
-//         imageUrl: './src/assets/image8.png',
-//       },
-//       {
-//         title: '3-Bedroom Arpartment Maintanance',
-//         description: 'Laundry',
-//         description1: 'Ironing & Folding',
-//         description2: 'General House Cleaning',
-//         description3: 'Shoes Cleaning',
-//         description4: 'Utensils & surfaces cleaning',
-//         price: 'Kshs. 5500',
-//         imageUrl: './src/assets/image7.png',
-//       },
-//       {
-//         title: '4-Bedroom Arpartment Maintanance',
-//         description: 'Laundry',
-//         description1: 'Ironing & Folding',
-//         description2: 'General House Cleaning',
-//         description3: 'Shoes Cleaning',
-//         description4: 'Utensils & surfaces cleaning',
-//         price: 'Kshs. 6500',
-//         imageUrl: './src/assets/image4.png',
-//       },
-//       {
-//         title: 'Stand Alone House Cleaning',
-//         description: '1 Bedroom @Ksh 1500',
-//         description1: '2 Bedroom @Ksh 2000',
-//         description2: '3 Bedroom @Ksh 2500',
-//         description3: 'For 4 bedroom and above call for quotation',
-//         // price: 'Residential & Commercial Cleaning',
-//         imageUrl: './src/assets/image9.png',
-//       },
-//       {
-//         title: 'Apartment Cleaning',
-//         description: 'Studio @Ksh. 1500',
-//         description1: '1 Bedroom @Ksh. 2000',
-//         description2: '2 Bedroom @Ksh. 2500',
-//         description3: '3 Bedroom @Ksh. 3500',
-//         description4: 'For 4 bedroom and above call for quotation',
-//         // price: 'Residential & Commercial Cleaning',
-//         imageUrl: './src/assets/image5.png',
-//       },
-      
-      
-//     ];
-  
-//     return (
-//       <div className="bg-[#fff] rounded-lg shadow-md px-4 py-8" id="price">
-//         <h2 className="text-3xl font-bold text-center mb-4 text-green">Mama Safi Packages</h2>
-//         <h3 className="text-l font-semibold text-center mb-4 text-green">Every Space needs Waridi home grooming services</h3>
-//         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-//           {priceListItems.map((item) => (
-//             <div key={item.title} className="flex flex-col justify-between p-4 border rounded-lg hover:shadow-lg bg-gradient-to-b from-grey to-transparent">
-//               <div className="flex items-center justify-between mb-4">
-//                 <div className="flex items-center space-x-2">
-//                   {item.imageUrl && (
-//                     <img
-//                       className="h-12 w-12 object-cover rounded-lg"
-//                       src={item.imageUrl}
-//                       alt={item.title}
-//                     />
-//                   )}
-//                   <h3 className="text-xl text-left font-bold text-yellow">{item.title}</h3>
-//                 </div>
-//                 <span className="text-yellow text-base font-bold text-right">{item.price}</span>
-//               </div>
-//               <div className="flex flex-col space-y-2 text-left ml-20">
-//                 <p className="text-gray-500 text-base">{item.description}</p>
-//                 <p className="text-gray-500 text-base">{item.description1}</p>
-//                 <p className="text-gray-500 text-base">{item.description2}</p>
-//                 <p className="text-gray-500 text-base">{item.description3}</p>
-//                 <p className="text-gray-500 text-base">{item.description4}</p>
-//               </div>
-              
-//             </div>
-//           ))}
-//         </div>
-//       </div>
-//     );
-//   }
-  
-//   export default PriceList;
-  
-
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import Image6 from '../assets/image6.png';
+import Image8 from '../assets/image8.png';
+import Image7 from '../assets/image7.png';
+import Image4 from '../assets/image4.png';
+import Image5 from '../assets/image5.png';
+import Image9 from '../assets/image9.png';
+
+
+
 
 const priceListItems = [
   {
@@ -113,7 +19,7 @@ const priceListItems = [
     description3: 'Shoes Cleaning',
     description4: 'Utensils & surfaces cleaning',
     price: 'Kshs. 3500',
-    imageUrl: './src/assets/image6.png',
+    imageUrl: Image6,
   },
   {
     title: '2-Bedroom Apartment Maintenance',
@@ -123,7 +29,7 @@ const priceListItems = [
     description3: 'Shoes Cleaning',
     description4: 'Utensils & surfaces cleaning',
     price: 'Kshs. 4500',
-    imageUrl: './src/assets/image8.png',
+    imageUrl: Image8,
   },
   {
     title: '3-Bedroom Apartment Maintenance',
@@ -133,7 +39,7 @@ const priceListItems = [
     description3: 'Shoes Cleaning',
     description4: 'Utensils & surfaces cleaning',
     price: 'Kshs. 5500',
-    imageUrl: './src/assets/image7.png',
+    imageUrl: Image7,
   },
   {
     title: '4-Bedroom Apartment Maintenance',
@@ -143,7 +49,7 @@ const priceListItems = [
     description3: 'Shoes Cleaning',
     description4: 'Utensils & surfaces cleaning',
     price: 'Kshs. 6500',
-    imageUrl: './src/assets/image4.png',
+    imageUrl: Image4,
   },
   {
     title: 'Stand Alone House Cleaning',
@@ -151,7 +57,7 @@ const priceListItems = [
     description1: '2 Bedroom @Ksh 2000',
     description2: '3 Bedroom @Ksh 2500',
     description3: 'For 4 bedroom and above call for quotation',
-    imageUrl: './src/assets/image9.png',
+    imageUrl: Image9,
   },
   {
     title: 'Apartment Cleaning',
@@ -160,7 +66,7 @@ const priceListItems = [
     description2: '2 Bedroom @Ksh. 2500',
     description3: '3 Bedroom @Ksh. 3500',
     description4: 'For 4 bedroom and above call for quotation',
-    imageUrl: './src/assets/image5.png',
+    imageUrl: Image5,
   },
 ];
 
