@@ -91,7 +91,7 @@ function Contact() {
           </div>
           <div className="flex items-center mt-5">
             <FontAwesomeIcon icon={faEnvelope} className="h-6 mr-2 text-yellow" />
-            <span className="text-sm">info@waridihomegrooming.com</span>
+            <span className="text-sm">info@waridihomegrooming.co.ke</span>
           </div>
           <div className="flex items-center mt-5">
             <FontAwesomeIcon icon={faPhoneAlt} className="h-6 mr-2 text-yellow" />

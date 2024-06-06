@@ -95,7 +95,7 @@ const Footer = () => {
               <span className="me-3 hover:text-primary">
                 <FontAwesomeIcon icon={faEnvelope} className="h-5 w-5" />
               </span>
-              <a href="mailto:info@waridihomegrooming.com" className="text-white hover:text-primary">info@waridihomegrooming.com</a>
+              <a href="mailto:info@waridihomegrooming.com" className="text-white hover:text-primary">info@waridihomegrooming.co.ke</a>
             </p>
             <p className="flex items-center justify-center md:justify-start">
               <span className="me-3 hover:text-primary">
